@@ -5,7 +5,7 @@ Repositorio en donde subimos nuestros avances en los trabajos practicos de Sinta
 
 - Biderman, Uriel Nicolás (Ubiderman-10)
 - Maidana, Emilio Alberto (EmilioMaidana)
-- COMPLETAR APELLIDO NOMBRE (USUARIO DE GITHUB)
+- Harche, Facundo (facundoHarche)
 - COMPLETAR APELLIDO NOMBRE (USUARIO DE GITHUB)
 - COMPLETAR APELLIDO NOMBRE (USUARIO DE GITHUB)
 
