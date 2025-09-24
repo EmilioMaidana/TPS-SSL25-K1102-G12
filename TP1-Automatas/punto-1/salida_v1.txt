@@ -1,0 +1,25 @@
+La cadena evaluada es la siguiente:
++123#0xAB118#0o117
+________________________________________________
+
+Se registraron 1 numeros decimales
+
+Se registraron 1 numeros octales
+
+Se registraron 1 numeros hexadecimales
+
+________________________________________________
+La cadena evaluada es la siguiente:
+0xAB118
+________________________________________________
+
+Se registraron 0 numeros decimales
+
+Se registraron 0 numeros octales
+
+Se registraron 1 numeros hexadecimales
+
+________________________________________________
+
+
+ Las pruebas se completaron con Exito
