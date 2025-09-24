@@ -6,7 +6,7 @@ Repositorio en donde subimos nuestros avances en los trabajos practicos de Sinta
 - Biderman, Uriel Nicolás (Ubiderman-10)
 - Maidana, Emilio Alberto (EmilioMaidana)
 - Harche, Facundo (facundoHarche)
-- COMPLETAR APELLIDO NOMBRE (USUARIO DE GITHUB)
+- Di Lorenzo Iapeghino,Tomas (tomydilorenzo)
 - COMPLETAR APELLIDO NOMBRE (USUARIO DE GITHUB)
 
 # Trabajo Práctico - Autómatas
