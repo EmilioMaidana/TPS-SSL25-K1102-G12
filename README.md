@@ -7,7 +7,6 @@ Repositorio en donde subimos nuestros avances en los trabajos practicos de Sinta
 - Maidana, Emilio Alberto (EmilioMaidana)
 - Harche, Facundo (facundoHarche)
 - Di Lorenzo Iapeghino,Tomas (tomydilorenzo)
-- COMPLETAR APELLIDO NOMBRE (USUARIO DE GITHUB)
 
 # Trabajo Práctico - Autómatas
 
