@@ -19,9 +19,17 @@ int main(){
     int numero = -1;
     if(c >= '0' && c <= '9'){
         numero = charToInt(c);
-        printf("Número leído: %d\n", numero);
+        FILE* fSalidaValida = fopen("salida_valida.txt", "w");
+        if(fSalidaValida != NULL){
+            fprintf(fSalidaValida, "Numero leido: %d.\n", numero);
+            fclose(fSalidaValida);
+        }
     } else {
-        printf("El carácter leído no es un número válido.\n");
+        FILE* fSalidaInvalida = fopen("salida_invalida.txt", "w");
+        if(fSalidaInvalida != NULL){
+            fprintf(fSalidaInvalida, "El caracter leido no es un numero valido: %c.\n", c);
+            fclose(fSalidaInvalida);
+        }
     }
 
     return 0;
