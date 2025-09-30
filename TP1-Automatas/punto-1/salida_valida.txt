@@ -1,0 +1,10 @@
+La cadena evaluada es la siguiente:
++123#0xAB118#0o117#-2312#123124515#0xDECAF#0o777#+987654#0o1234567#-101010#0xFACE#12345#-67890#0o11#0xABC123#+1234567890
+________________________________________________
+
+Se registraron 8 numeros decimales
+
+Se registraron 4 numeros octales
+
+Se registraron 4 numeros hexadecimales
+________________________________________________
