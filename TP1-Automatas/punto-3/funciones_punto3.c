@@ -7,12 +7,6 @@
 #include "../punto-3/funciones_punto3.h"
 #include "../funciones_comunes/funcionesComunes.h"
 
-/*
-    LA FUNCION DE infijaAPostfija Y evaluarPostfija
-    LA PRIMERA FUNCION ES MAS SOBRE EL ALGORITMO DE SHUNTIGN YARD
-    LA SEGUNDA FUNCION AGARRA LOS PRIMEROS DOS OPERANDOS CON EL SIGUIENTE OPERADOR, HACE UN RESULTADO PARCIAL Y LO METE EN LA PILA
-    Y ASI SUCESIVAMENTE
-*/
 // Devuelve la columna de transicion segun el caracter 
 int columnas(char c){
     if(elCaracterEsNumero(c)) return 0;
