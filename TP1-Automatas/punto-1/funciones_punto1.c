@@ -2,7 +2,8 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
-#include "punto1_automatasTP_v2.h"
+#include "funciones_punto1.h"
+#include "../funciones_comunes/funcionesComunes.h"
 
 // Devuelve la columna de transicion segun el caracter y el estado
 int columna(char c, int e){
@@ -44,7 +45,7 @@ int esPalabra(char* cadena){
         e = tt[e][columna(c, e)];
 
         if(e == 9 || e == 8) {
-            escribirArchivo("salida_invalida.txt", cadena, 0, 0, 0, 0);
+            escribirArchivoGenerico("salida_invalida.txt", PUNTO1, cadena, 0, 0, 0, NULL, 0);
             return 0;
         }
         
@@ -62,62 +63,6 @@ int esPalabra(char* cadena){
     else if (e == 5) octales++;
     else if (e == 7) hexadecimales++;
 
-    escribirArchivo("salida_invalida.txt", cadena, decimales, octales, hexadecimales, 1);
+    escribirArchivoGenerico("salida_valida.txt", PUNTO1, cadena, decimales, octales, hexadecimales, NULL, 1);
     return 1;
 }  
-
-void escribirArchivo(char* nombre, char* cadena, int decimales, int octales, int hexadecimales, int valido){
-    FILE* f = fopen(nombre, "w");
-    if(f) {
-        if(valido) {
-            fprintf(f, 
-                "La cadena evaluada es la siguiente:\n%s"
-                "\n________________________________________________\n"
-                "\nSe registraron %d numeros decimales\n"
-                "\nSe registraron %d numeros octales\n"
-                "\nSe registraron %d numeros hexadecimales"
-                "\n________________________________________________\n", 
-                cadena, decimales, octales, hexadecimales);  
-        } else {
-            fprintf(f, "Error lexico en la cadena:\n%s\n", cadena);
-        }
-        fclose(f);
-    }
-}
-
-int main(){
-
-    FILE* archivo = fopen("cadena.txt", "r");
-    if (!archivo) {
-        printf("Error al abrir el archivo.\n");
-        return -1;
-    }
-
-    // Calcular tamaño del archivo
-    fseek(archivo, 0, SEEK_END);
-    long length = ftell(archivo);
-    rewind(archivo);
-
-    // Reservar memoria
-    char* buffer = malloc((length + 1) * sizeof(char));
-    if(buffer == NULL) {
-        printf("Error al reserver memoria. \n");
-        fclose(archivo);
-        return -1;
-    }
-
-    // Leer todo el archivo
-    fread(buffer, sizeof(char), length, archivo);
-    buffer[length] = '\0'; // Asegurar el fin de cadena
-    fclose(archivo);
-
-    // Procesar la cadena
-    if(esPalabra(buffer)) {
-        printf("Cadena valida procesada.\n");
-    } else {
-        printf("Cadena invalida.\n");
-    }
-
-    free(buffer);
-    return 0;
-}

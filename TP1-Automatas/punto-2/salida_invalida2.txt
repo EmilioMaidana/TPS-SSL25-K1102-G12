@@ -1,1 +1,1 @@
-El caracter leido no es un numero valido: q.
+El caracter leido no es un numero valido.

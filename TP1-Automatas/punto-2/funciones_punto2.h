@@ -2,5 +2,6 @@
 #define FUNCIONES_PUNTO2_H
 
 int charToInt(char c);
+int elCaracterEsNumero(char c);
 
 #endif

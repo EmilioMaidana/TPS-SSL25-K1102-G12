@@ -1,0 +1,3 @@
+Expresion: 3+4*7+3-8/4
+Expresion postfija: 347*+3+84/-
+Resultado final: 32
