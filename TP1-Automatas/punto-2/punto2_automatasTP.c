@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "punto2_automatasTP.h"
 
 int charToInt(char c) {
     return c - '0';

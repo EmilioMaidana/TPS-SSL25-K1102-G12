@@ -2,6 +2,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
+#include "punto1_automatasTP_v2.h"
 
 // Devuelve la columna de transicion segun el caracter y el estado
 int columna(char c, int e){
@@ -43,11 +44,7 @@ int esPalabra(char* cadena){
         e = tt[e][columna(c, e)];
 
         if(e == 9 || e == 8) {
-            FILE* fSalidaInvalida = fopen("salida_invalida.txt", "w");
-            if(fSalidaInvalida) {
-                fprintf(fSalidaInvalida, "Error lexico en la cadena:\n%s\n", cadena);
-                fclose(fSalidaInvalida);
-            }
+            escribirArchivo("salida_invalida.txt", cadena, 0, 0, 0, 0);
             return 0;
         }
         
@@ -64,22 +61,29 @@ int esPalabra(char* cadena){
     if (e == 2) decimales++;
     else if (e == 5) octales++;
     else if (e == 7) hexadecimales++;
-    
-    FILE* fSalidaValida = fopen("salida_valida.txt", "w");
-    if(fSalidaValida) {
-        fprintf(fSalidaValida, 
-            "La cadena evaluada es la siguiente:\n%s"
-            "\n________________________________________________\n"
-            "\nSe registraron %d numeros decimales\n"
-            "\nSe registraron %d numeros octales\n"
-            "\nSe registraron %d numeros hexadecimales"
-            "\n________________________________________________\n", 
-            cadena, decimales, octales, hexadecimales);  
-        fclose(fSalidaValida);
-    }
 
+    escribirArchivo("salida_invalida.txt", cadena, decimales, octales, hexadecimales, 1);
     return 1;
 }  
+
+void escribirArchivo(char* nombre, char* cadena, int decimales, int octales, int hexadecimales, int valido){
+    FILE* f = fopen(nombre, "w");
+    if(f) {
+        if(valido) {
+            fprintf(f, 
+                "La cadena evaluada es la siguiente:\n%s"
+                "\n________________________________________________\n"
+                "\nSe registraron %d numeros decimales\n"
+                "\nSe registraron %d numeros octales\n"
+                "\nSe registraron %d numeros hexadecimales"
+                "\n________________________________________________\n", 
+                cadena, decimales, octales, hexadecimales);  
+        } else {
+            fprintf(f, "Error lexico en la cadena:\n%s\n", cadena);
+        }
+        fclose(f);
+    }
+}
 
 int main(){
 
