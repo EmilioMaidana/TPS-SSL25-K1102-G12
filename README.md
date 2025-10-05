@@ -7,6 +7,7 @@ Repositorio en donde subimos nuestros avances en los trabajos practicos de Sinta
 - Maidana, Emilio Alberto (EmilioMaidana)
 - Harche, Facundo (facundoHarche)
 - Di Lorenzo Iapeghino,Tomas (tomydilorenzo)
+- Lichtmaier, Federico Ivan (flichtmaier)
 
 # Trabajo Práctico - Autómatas
 
