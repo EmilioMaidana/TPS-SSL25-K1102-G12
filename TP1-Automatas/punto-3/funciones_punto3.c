@@ -16,18 +16,11 @@ int columnas(char c){
 }
 
 int verificarExpresion(char* expresion) {
-    /* Estados: 
-        0 = inicio (espera primer operador)
-        1 = primer digito (espera un operador) --> NO ACEPTADO
-        2 = despues de operador (espera un digito)
-        3 = despues de haber visto un operador --> ACEPTADO
-        4 = erro
-    */
     static int tt[5][4] = {
         {1, 4, 4, 4},
-        {1, 2, 2, 4},
+        {4, 2, 2, 4},
         {3, 4, 4, 4},
-        {3, 2, 2, 4},
+        {4, 2, 2, 4},
         {4, 4, 4, 4}
     };
 
@@ -38,7 +31,7 @@ int verificarExpresion(char* expresion) {
         if(e == 4) return 0; // Estado de rechazo
     }
 
-    return (e == 3); // Aceptada si termina en numero
+    return (e == 3);
 }
 
 int precedencia(char operador) {

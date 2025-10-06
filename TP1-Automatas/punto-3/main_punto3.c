@@ -8,7 +8,7 @@
 #include "../funciones_comunes/funcionesComunes.h"
 
 int main(){
-    char* cadena = leerArchivo("cadena_invalida.txt");
+    char* cadena = leerArchivo("cadena_valida.txt");
     if(!cadena){
         return -1;
     }
