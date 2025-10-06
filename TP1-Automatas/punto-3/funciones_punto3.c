@@ -10,18 +10,16 @@
 // Devuelve la columna de transicion segun el caracter 
 int columnas(char c){
     if(elCaracterEsNumero(c)) return 0;
-    if(c == '+' || c == '-') return 1;
-    if(c == '*' || c == '/') return 2;
-    return 3; // Cualquier otro -> error
+    if(c == '+' || c == '-' || c == '*' || c == '/') return 1;
+    return 2; // Cualquier otro -> error
 }
 
 int verificarExpresion(char* expresion) {
-    static int tt[5][4] = {
-        {1, 4, 4, 4},
-        {4, 2, 2, 4},
-        {3, 4, 4, 4},
-        {4, 2, 2, 4},
-        {4, 4, 4, 4}
+    static int tt[4][3] = {
+        {1, 4, 4},
+        {4, 2, 4},
+        {3, 4, 4},
+        {4, 4, 4}
     };
 
     int e = 0;
