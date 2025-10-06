@@ -44,10 +44,10 @@ void escribirArchivoGenerico(char* nombreArchivo, PuntoTP puntoTP, char* cadena,
                     break;
             }
         }
-        fclose(f);
     } else {
         printf("No se pudo abrir el archivo %s para escritura.\n", nombreArchivo);
     }
+    fclose(f);
 }
 
 char* leerArchivo(const char* nombreArchivo){
