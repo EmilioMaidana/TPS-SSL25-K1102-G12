@@ -5,7 +5,7 @@
 
 int main(){
 
-    FILE* f = fopen("cadena2.txt", "r");
+    FILE* f = fopen("caracter_valido.txt", "r");
     if(f == NULL) {
         printf("Error al abrir el archivo.\n");
         return -1;
@@ -13,14 +13,16 @@ int main(){
 
     char c = fgetc(f); // Lee un carácter
     fclose(f);
+    printf ("Caracter leido: %c\n", c);
 
     if(elCaracterEsNumero(c)) {
         int numero = charToInt(c);
         printf("El caracter es un numero valido.\n");
-        escribirArchivoGenerico("salida_valida2.txt", PUNTO2, NULL, numero, 0, 0, NULL, 1);
+        printf("Numero leido: %d\n", numero);
+        escribirArchivoGenerico("salida_valido_punto2.txt", PUNTO2, &c, numero, 0, 0, NULL, 1);
     } else{
         printf("El caracter no es un numero valido.\n");
-        escribirArchivoGenerico("salida_invalida2.txt", PUNTO2, NULL, 0, 0, 0, NULL, 0);
+        escribirArchivoGenerico("salida_invalido_punto2.txt", PUNTO2, &c, 0, 0, 0, NULL, 0);
     }
 
     return 0;

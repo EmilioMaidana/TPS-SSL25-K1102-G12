@@ -117,6 +117,11 @@ void convertirYEvaluarExpresion(char* cadena){
     char postfija[cantOperandos + cantOperadores + 1]; // Agrego el +1 por el \0
     infijaAPostfija(cadena, postfija, cantOperadores);
 
+    printf("Expresion postfija: %s\n", postfija);
+
     int resultado = evaluarPostfija(postfija, cantOperandos);
-    escribirArchivoGenerico("salida_valida3.txt", PUNTO3, cadena, resultado, 0, 0, postfija, 1);
+    printf("Resultado: %d\n", resultado);
+    
+    escribirArchivoGenerico("salida_valida_punto3.txt", PUNTO3, cadena, resultado, 0, 0, postfija, 1);
+
 }

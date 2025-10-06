@@ -1,0 +1,3 @@
+Caracter leido: 8
+El caracter es un numero valido.
+Numero leido: 8.

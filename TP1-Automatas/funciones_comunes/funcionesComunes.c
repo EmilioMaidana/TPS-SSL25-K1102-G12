@@ -20,6 +20,8 @@ void escribirArchivoGenerico(char* nombreArchivo, PuntoTP puntoTP, char* cadena,
                                cadena, datosExtra1, datosExtra2, datosExtra3);
                     break;
                 case PUNTO2:
+                    fprintf(f,"Caracter leido: %c\n", *cadena);
+                    fprintf(f,"El caracter es un numero valido.\n");
                     fprintf(f, "Numero leido: %d.\n", datosExtra1);
                     break;
                 case PUNTO3:
@@ -34,6 +36,7 @@ void escribirArchivoGenerico(char* nombreArchivo, PuntoTP puntoTP, char* cadena,
                     fprintf(f, "Error lexico en la cadena:\n%s\n", cadena);
                     break;
                 case PUNTO2:
+                    fprintf(f,"Caracter leido: %c\n", *cadena);
                     fprintf(f, "El caracter leido no es un numero valido.\n");
                     break;
                 case PUNTO3:

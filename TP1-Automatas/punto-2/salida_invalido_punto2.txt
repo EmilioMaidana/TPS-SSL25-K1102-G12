@@ -1,1 +1,2 @@
+Caracter leido: p
 El caracter leido no es un numero valido.

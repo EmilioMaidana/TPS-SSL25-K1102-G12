@@ -8,18 +8,19 @@
 #include "../funciones_comunes/funcionesComunes.h"
 
 int main(){
-    char* cadena = leerArchivo("cadena3.txt");
+    char* cadena = leerArchivo("cadena_invalida.txt");
     if(!cadena){
         return -1;
     }
 
     if(!verificarExpresion(cadena)) {
-        printf("Cadena invalida.\n");
-        escribirArchivoGenerico("salida_invalida3.txt", PUNTO3, cadena, 0, 0, 0, NULL, 0);
+        printf("Cadena invalida: %s\n", cadena);
+        escribirArchivoGenerico("salida_invalida_punto3.txt", PUNTO3, cadena, 0, 0, 0, NULL, 0);
         return 0;
     }
+    
+    printf("Expresion: %s\n", cadena);
 
-    printf("Cadena valida procesada.\n");
     convertirYEvaluarExpresion(cadena);
 
     free(cadena);
