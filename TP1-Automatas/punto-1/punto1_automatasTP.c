@@ -104,7 +104,7 @@ int esPalabra(char* cadena, int printValues){     //aca el vector se pasa por re
 
 
 
-    /*// codigo ia
+    /*
     int e = 0;
     int i = 0;
     int c = cadena[i];
